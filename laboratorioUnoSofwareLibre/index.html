@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduccion a PHP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand me-auto" href="#">Introduccion a PHP</a>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Introduccion a PHP
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <!-- Elementos -->
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" aria-current="page" href="#"
+                  >Cristian Rivera</a
+                >
+              </li>
+              <!-- fin -->
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" aria-current="page" href="#"
+                  >Daniel Diaz</a
+                >
+              </li>
+              <!-- fin
+           <li class="nav-item">
+            <a class="nav-link  mx-lg-2" aria-current="page" href="#">Contacto</a>
+          </li>
+          <!-- fin -->
+              <!-- <li class="nav-item">
+            <a class="nav-link  mx-lg-2" aria-current="page" href="#">PHP</a>
+          </li> -->
+              <!-- fin -->
+            </ul>
+          </div>
+        </div>
+        <a
+          rel="noopener noreferrer"
+          href="https://www.php.net/manual/es/index.php"
+          target="_blank"
+          class="login-button"
+          >Documentacion</a
+        >
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- Hero section -->
+    <section class="hero-section">
+      <div
+        class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column"
+      >
+        <h1>¿Que es la programación web?</h1>
+        <!-- <h2>ola</h2> -->
+      </div>
+    </section>
+    <!-- End Hero section -->
+
+    <div class="content">
+      <h1>¿En que consiste la programación web?</h1>
+      <p>
+        La programación web es el proceso de crear, dar mantenimiento a sitios y
+        aplicaciones web usando lenguajes de programcion para que se vean
+        interactivos y actractivos. Para lograr se utilizan distintas
+        tecnologias entre ellas las mas basicas HTML, CSS y Javascript este
+        ultimo puede servir tanto como para FRONT-END y BACK-END
+      </p>
+    </div>
+
+    <div class="structures">
+      <h1>Estructuras mas comunes</h1>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">IF</h5>
+          <p class="card-text">
+            La sentencia if...else ejecuta una sentencia, si una condición específicada es evaluada como verdadera. Si la condición es evaluada como falsa, otra sentencia en la clausula opcional else será ejecutado
+          </p>
+          <a rel="noopener noreferrer" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank" class="btn btn-success">Documentacion</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Switch</h5>
+          <p class="card-text">
+            La declaración switch evalúa una expresión, comparando el valor de esa expresión con una instancia case, y ejecuta declaraciones asociadas a ese case, así como las declaraciones en los case que siguen.
+
+          </p>
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/switch" class="btn btn-success">Documentacion</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">While</h5>
+          <p class="card-text">
+            Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia
+          </p>
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/while" class="btn btn-success">Documentacion</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">For</h5>
+          <p class="card-text">
+           es una estructura de control que repite un bloque de código un número específico de veces, ideal para iterar sobre arrays u otras secuencias.
+          </p>
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for" class="btn btn-success">Documentacion</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">For each</h5>
+          <p class="card-text">
+            El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+          </p>
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="btn btn-success">Documentacion</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <p>Cristian <b>Rivera</b> | Daniel <b>Diaz</b> </p>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
