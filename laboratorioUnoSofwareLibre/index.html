@@ -49,15 +49,6 @@
                   >Daniel Diaz</a
                 >
               </li>
-              <!-- fin
-           <li class="nav-item">
-            <a class="nav-link  mx-lg-2" aria-current="page" href="#">Contacto</a>
-          </li>
-          <!-- fin -->
-              <!-- <li class="nav-item">
-            <a class="nav-link  mx-lg-2" aria-current="page" href="#">PHP</a>
-          </li> -->
-              <!-- fin -->
             </ul>
           </div>
         </div>
@@ -158,9 +149,241 @@
       </div>
     </div>
 
+            <!-- Sección PHP -->
+    <div class="php-section container mt-5">
+      <h1 class="mb-4 text-center">Introducción a PHP</h1>
+      <p class="text-center">
+        PHP (Hypertext Preprocessor) es un lenguaje de programación muy popular
+        para crear páginas web dinámicas. A diferencia de HTML o CSS, que son
+        lenguajes estáticos, PHP se ejecuta en el servidor y puede conectarse a
+        bases de datos, manejar formularios y generar contenido en tiempo real.
+        Si alguna vez has iniciado sesión en una página, publicado en un foro o
+        comprado en una tienda online, lo más probable es que en algún punto se
+        haya usado PHP detrás de escena.
+      </p>
+      
+      <br><br><br><br>
+
+      <!-- Instalación -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Instalación y entorno</h3>
+          <p class="card-text">
+            Para trabajar con PHP no basta con escribir el código, necesitamos
+            un servidor que lo ejecute. Si solo abres un archivo <code>.php</code>
+            en tu navegador, no funcionará, porque PHP se interpreta en el lado
+            del servidor.
+          </p>
+          <h6>Paso a paso (Windows con XAMPP):</h6>
+          <ol>
+            <li>Descarga <a href="https://www.apachefriends.org/es/index.html" target="_blank">XAMPP</a> e instálalo.</li>
+            <li>Abre el panel de control de XAMPP y activa <b>Apache</b> y <b>MySQL</b>.</li>
+            <li>Entra a la carpeta <code>htdocs</code> (ubicada dentro de XAMPP).</li>
+            <li>Crea un archivo llamado <code>hola.php</code> y escribe lo siguiente:</li>
+          </ol>
+          <pre><code>&lt;?php
+echo "Hola Mundo desde PHP";
+?&gt;</code></pre>
+          <p>
+            Luego abre tu navegador y visita:
+            <code>http://localhost/hola.php</code>.  
+            Si ves el mensaje en pantalla, ¡felicidades, ya tienes PHP funcionando!
+          </p>
+        </div>
+      </div>
+
+      <!-- Fundamentos -->
+      <div class="accordion mb-4" id="fundamentosAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFundamentos">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFundamentos" aria-expanded="true" aria-controls="collapseFundamentos">
+               Fundamentos de PHP
+            </button>
+          </h2>
+          <div id="collapseFundamentos" class="accordion-collapse collapse show" aria-labelledby="headingFundamentos" data-bs-parent="#fundamentosAccordion">
+            <div class="accordion-body">
+              <p>
+                PHP tiene una sintaxis muy parecida a otros lenguajes como C o
+                JavaScript, pero con algunas particularidades. Lo más básico que
+                debes conocer:
+              </p>
+              <ul>
+                <li><b>Variables:</b> Siempre empiezan con <code>$</code>. Ejemplo: <code>$nombre = "Daniel";</code>.</li>
+                <li><b>Tipos de datos:</b> texto (string), números enteros (int), decimales (float), verdadero/falso (boolean), arreglos, objetos y null.</li>
+                <li><b>Operadores:</b> 
+                  <ul>
+                    <li>Aritméticos: <code>+ - * / %</code></li>
+                    <li>Comparación: <code>== != &gt; &lt; &gt;= &lt;=</code></li>
+                    <li>Lógicos: <code>&amp;&amp; || !</code></li>
+                  </ul>
+                </li>
+                <li><b>Estructuras de control:</b> <code>if</code>, <code>else</code>, <code>switch</code>, bucles <code>for</code>, <code>while</code>, <code>foreach</code>.</li>
+              </ul>
+              <pre><code>&lt;?php
+$edad = 20;
+if($edad &gt;= 18){
+    echo "Eres mayor de edad";
+} else {
+    echo "Eres menor de edad";
+}
+?&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Funciones -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Funciones en PHP</h3>
+          <p class="card-text">
+            Una función es un bloque de código que puedes reutilizar. Esto evita
+            repetir lo mismo una y otra vez.  
+          </p>
+          <p>Ejemplo de función:</p>
+          <pre><code>&lt;?php
+function saludo($nombre) {
+    return "Hola, " . $nombre . "!";
+}
+echo saludo("Cristian"); // Hola, Cristian!
+?&gt;</code></pre>
+          <p>
+            Consejo: las funciones te ayudan a organizar tu programa en partes
+            más pequeñas y fáciles de entender.
+          </p>
+        </div>
+      </div>
+
+      <!-- Formularios -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Manejo de Formularios</h3>
+          <p>
+            PHP se usa mucho para procesar datos de formularios, como logins o
+            registros.
+          </p>
+          <p><b>Ejemplo:</b></p>
+          <pre><code>&lt;form method="post"&gt;
+  Nombre: &lt;input type="text" name="usuario"&gt;
+  &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if(isset($_POST['usuario'])){
+    echo "Bienvenido, " . $_POST['usuario'];
+}
+?&gt;</code></pre>
+          <p>
+            Nota: siempre valida y limpia los datos que recibes para evitar
+            ataques de seguridad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Conexión a BD -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Conexión con Bases de Datos</h3>
+          <p>
+            Uno de los puntos más fuertes de PHP es que puede trabajar con
+            bases de datos como MySQL. Aquí un ejemplo sencillo usando MySQLi:
+          </p>
+          <pre><code>&lt;?php
+$conn = new mysqli("localhost", "root", "", "mi_base");
+
+if ($conn-&gt;connect_error) {
+  die("Error de conexión: " . $conn-&gt;connect_error);
+}
+
+$result = $conn-&gt;query("SELECT nombre FROM usuarios");
+
+while($row = $result-&gt;fetch_assoc()) {
+  echo $row["nombre"] . "&lt;br&gt;";
+}
+$conn-&gt;close();
+?&gt;</code></pre>
+          <p>
+            En este ejemplo:  
+            - Nos conectamos al servidor local.  
+            - Ejecutamos una consulta.  
+            - Recorremos los resultados con un bucle <code>while</code>.  
+            - Cerramos la conexión.  
+          </p>
+        </div>
+      </div>
+
+      <!-- Sesiones -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Sesiones en PHP</h3>
+          <p>
+            Las sesiones permiten guardar información mientras un usuario navega
+            por la página. Por ejemplo, recordar quién ha iniciado sesión.
+          </p>
+          <pre><code>&lt;?php
+session_start();
+$_SESSION["usuario"] = "Daniel";
+echo "Bienvenido, " . $_SESSION["usuario"];
+?&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Archivos -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Manejo de Archivos</h3>
+          <p>
+            PHP también puede crear, leer y modificar archivos en el servidor.
+          </p>
+          <pre><code>&lt;?php
+$file = fopen("datos.txt", "w"); // Abrir en modo escritura
+fwrite($file, "Hola desde PHP"); // Escribir
+fclose($file); // Cerrar archivo
+?&gt;</code></pre>
+          <p>
+            Este código genera un archivo <code>datos.txt</code> y escribe en él
+            el texto "Hola desde PHP".
+          </p>
+        </div>
+      </div>
+
+      <!-- Proyectos -->
+      <div class="accordion mb-4" id="proyectosAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingProyectos">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProyectos" aria-expanded="false" aria-controls="collapseProyectos">
+            Ejemplos de Proyectos en PHP
+            </button>
+          </h2>
+          <div id="collapseProyectos" class="accordion-collapse collapse" aria-labelledby="headingProyectos" data-bs-parent="#proyectosAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Un sistema de login con usuarios y contraseñas.</li>
+                <li>Un blog donde se guarden las publicaciones en MySQL.</li>
+                <li>Un carrito de compras simple.</li>
+                <li>Una calculadora con formularios.</li>
+                <li>Un gestor de tareas con opciones de agregar y eliminar.</li>
+              </ul>
+              <p>
+                Estos proyectos son ideales para practicar y poco a poco ir
+                dominando PHP en la práctica.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="https://www.php.net/manual/es/" target="_blank" class="btn btn-primary">Ver documentación oficial</a>
+      </div>
+    </div>
+    <!-- End PHP Section -->
+
+    <br><br>
+
 
     <div class="footer">
-      <p>Cristian <b>Rivera</b> | Daniel <b>Diaz</b> </p>
+      <p>by: Cristian <b>Rivera</b> | Daniel <b>Diaz</b> </p>
     </div>
 
     <!-- bootstrap -->

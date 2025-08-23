@@ -183,4 +183,39 @@
   font-size: 20px;
 }
 
+/* Editor estilos */
+.code-editor {
+    position: relative;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    overflow-x: auto;
+    margin-top: 10px;
+  }
+  .code-editor pre {
+    margin: 0;
+  }
+  .code-editor code {
+    color: #9cdcfe;
+  }
+  .code-editor .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .code-editor .copy-btn:hover {
+    background: #005a9e;
+  }
 
+  .language-php {
+    color: #4ec9b0;
+  }
