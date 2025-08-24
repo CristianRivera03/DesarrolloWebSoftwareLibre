@@ -182,8 +182,8 @@
             <li>Crea un archivo llamado <code>hola.php</code> y escribe lo siguiente:</li>
           </ol>
           <pre><code>&lt;?php
-echo "Hola Mundo desde PHP";
-?&gt;</code></pre>
+          echo "Hola Mundo desde PHP";
+          ?&gt;</code></pre>
           <p>
             Luego abre tu navegador y visita:
             <code>http://localhost/hola.php</code>.  
@@ -217,16 +217,103 @@ echo "Hola Mundo desde PHP";
                     <li>Lógicos: <code>&amp;&amp; || !</code></li>
                   </ul>
                 </li>
-                <li><b>Estructuras de control:</b> <code>if</code>, <code>else</code>, <code>switch</code>, bucles <code>for</code>, <code>while</code>, <code>foreach</code>.</li>
+                <li><b>Estructuras de control:</b> <code>if</code>, <code>else</code>, <code>switch</code>. Estruturas de bucles <code>for</code>, <code>while</code>, <code>foreach</code>.</li>
               </ul>
-              <pre><code>&lt;?php
-$edad = 20;
-if($edad &gt;= 18){
-    echo "Eres mayor de edad";
-} else {
-    echo "Eres menor de edad";
-}
-?&gt;</code></pre>
+
+              <br><h5>Ejemplo de Estructura de Control if</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;<br>?php
+                <br>$edad = 20;
+                <br>
+                <br>if ($edad >= 18) {
+                    <br>echo "Eres mayor de edad.";
+                <br>}
+                <br>?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Control if-else</h5>
+
+              <div class="codigo-ejemplo">
+                <br>&lt;?php
+                <br>$hora = 10;
+
+                <br>if ($hora < 12) {
+                    <br>echo "Buenos días";
+                <br>} else {
+                    <br>echo "Buenas tardes";
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Control Switch</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$dia = 3;
+
+                <br>switch ($dia) {
+                    <br>case 1:
+                        <br>echo "Lunes";
+                    <br>break;
+                    <br>case 2:
+                        <br>echo "Martes";
+                    <br>break;
+                    <br>case 3:
+                        <br>echo "Miércoles";
+                    <br>break;
+                    <br>default:
+                        <br>echo "Día desconocido";
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Bucle While</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$contador = 1;
+
+                <br>while ($contador <= 5) {
+                    <br>echo "Número: " . $contador;
+                    <br>$contador++;
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Bucle Do While</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$contador = 1;
+
+                <br>do {
+                    <br>echo "Número: " . $contador;
+                    <br>$contador++;
+                <br>} while ($contador <= 5);
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de For</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>for ($contador = 1; $contador <= 5; $contador++) {
+                    <br>echo "Número: " . $contador;
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Bucle Foreach</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$numeros = [1, 2, 3, 4, 5];
+                <br>foreach ($numeros as $numero) {
+                    <br>echo "Número: " . $numero;
+                <br>}
+                ?&gt;
+              </div>
             </div>
           </div>
         </div>
