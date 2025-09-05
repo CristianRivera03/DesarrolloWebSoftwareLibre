@@ -49,15 +49,6 @@
                   >Daniel Diaz</a
                 >
               </li>
-              <!-- fin
-           <li class="nav-item">
-            <a class="nav-link  mx-lg-2" aria-current="page" href="#">Contacto</a>
-          </li>
-          <!-- fin -->
-              <!-- <li class="nav-item">
-            <a class="nav-link  mx-lg-2" aria-current="page" href="#">PHP</a>
-          </li> -->
-              <!-- fin -->
             </ul>
           </div>
         </div>
@@ -87,80 +78,331 @@
       <div
         class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column"
       >
-        <h1>¿Que es la programación web?</h1>
+        <h1>Introducción a PHP</h1>
         <!-- <h2>ola</h2> -->
       </div>
     </section>
     <!-- End Hero section -->
 
     <div class="content">
-      <h1>¿En que consiste la programación web?</h1>
+      <h1>¿Que es PHP?</h1>
       <p>
-        La programación web es el proceso de crear, dar mantenimiento a sitios y
-        aplicaciones web usando lenguajes de programcion para que se vean
-        interactivos y actractivos. Para lograr se utilizan distintas
-        tecnologias entre ellas las mas basicas HTML, CSS y Javascript este
-        ultimo puede servir tanto como para FRONT-END y BACK-END
+        PHP (Hypertext Preprocessor) es un lenguaje de programación muy popular
+        para crear páginas web dinámicas. A diferencia de HTML o CSS, que son
+        lenguajes estáticos, PHP se ejecuta en el servidor y puede conectarse a
+        bases de datos, manejar formularios y generar contenido en tiempo real.
+        Si alguna vez has iniciado sesión en una página, publicado en un foro o
+        comprado en una tienda online, lo más probable es que en algún punto se
+        haya usado PHP detrás de escena.
       </p>
     </div>
 
-    <div class="structures">
-      <h1>Estructuras mas comunes</h1>
-      <div class="card" style="width: 18rem">
+            <!-- Sección PHP -->
+    <div class="php-section container mt-5">
+
+      <!-- Instalación -->
+      <div class="card mb-4 shadow-sm">
         <div class="card-body">
-          <h5 class="card-title">IF</h5>
+          <h3 class="card-title">Instalación y entorno</h3>
           <p class="card-text">
-            La sentencia if...else ejecuta una sentencia, si una condición específicada es evaluada como verdadera. Si la condición es evaluada como falsa, otra sentencia en la clausula opcional else será ejecutado
+            Para trabajar con PHP no basta con escribir el código, necesitamos
+            un servidor que lo ejecute. Si solo abres un archivo <code>.php</code>
+            en tu navegador, no funcionará, porque PHP se interpreta en el lado
+            del servidor.
           </p>
-          <a rel="noopener noreferrer" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/if...else" target="_blank" class="btn btn-success">Documentacion</a>
+          <h6>Paso a paso (Windows con XAMPP):</h6>
+          <ol>
+            <li>Descarga <a href="https://www.apachefriends.org/es/index.html" target="_blank">XAMPP</a> e instálalo.</li>
+            <li>Abre el panel de control de XAMPP y activa <b>Apache</b> y <b>MySQL</b>.</li>
+            <li>Entra a la carpeta <code>htdocs</code> (ubicada dentro de XAMPP).</li>
+            <li>Crea un archivo llamado <code>hola.php</code> y escribe lo siguiente:</li>
+          </ol>
+          <pre><code>&lt;?php
+          echo "Hola Mundo desde PHP";
+          ?&gt;</code></pre>
+          <p>
+            Luego abre tu navegador y visita:
+            <code>http://localhost/hola.php</code>.  
+            Si ves el mensaje en pantalla, ¡felicidades, ya tienes PHP funcionando!
+          </p>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Switch</h5>
-          <p class="card-text">
-            La declaración switch evalúa una expresión, comparando el valor de esa expresión con una instancia case, y ejecuta declaraciones asociadas a ese case, así como las declaraciones en los case que siguen.
+      <!-- Fundamentos -->
+      <div class="accordion mb-4" id="fundamentosAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFundamentos">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFundamentos" aria-expanded="true" aria-controls="collapseFundamentos">
+               Fundamentos de PHP
+            </button>
+          </h2>
+          <div id="collapseFundamentos" class="accordion-collapse collapse show" aria-labelledby="headingFundamentos" data-bs-parent="#fundamentosAccordion">
+            <div class="accordion-body">
+              <p>
+                PHP tiene una sintaxis muy parecida a otros lenguajes como C o
+                JavaScript, pero con algunas particularidades. Lo más básico que
+                debes conocer:
+              </p>
+              <ul>
+                <li><b>Variables:</b> Siempre empiezan con <code>$</code>. Ejemplo: <code>$nombre = "Daniel";</code>.</li>
+                <li><b>Tipos de datos:</b> texto (string), números enteros (int), decimales (float), verdadero/falso (boolean), arreglos, objetos y null.</li>
+                <li><b>Operadores:</b> 
+                  <ul>
+                    <li>Aritméticos: <code>+ - * / %</code></li>
+                    <li>Comparación: <code>== != &gt; &lt; &gt;= &lt;=</code></li>
+                    <li>Lógicos: <code>&amp;&amp; || !</code></li>
+                  </ul>
+                </li>
+                <li><b>Estructuras de control:</b> <code>if</code>, <code>else</code>, <code>switch</code>. Estruturas de bucles <code>for</code>, <code>while</code>, <code>foreach</code>.</li>
+              </ul>
 
-          </p>
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/switch" class="btn btn-success">Documentacion</a>
+              <br><h5>Ejemplo de Estructura de Control if</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;<br>?php
+                <br>$edad = 20;
+                <br>
+                <br>if ($edad >= 18) {
+                    <br>echo "Eres mayor de edad.";
+                <br>}
+                <br>?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Control if-else</h5>
+
+              <div class="codigo-ejemplo">
+                <br>&lt;?php
+                <br>$hora = 10;
+
+                <br>if ($hora < 12) {
+                    <br>echo "Buenos días";
+                <br>} else {
+                    <br>echo "Buenas tardes";
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Control Switch</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$dia = 3;
+
+                <br>switch ($dia) {
+                    <br>case 1:
+                        <br>echo "Lunes";
+                    <br>break;
+                    <br>case 2:
+                        <br>echo "Martes";
+                    <br>break;
+                    <br>case 3:
+                        <br>echo "Miércoles";
+                    <br>break;
+                    <br>default:
+                        <br>echo "Día desconocido";
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Bucle While</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$contador = 1;
+
+                <br>while ($contador <= 5) {
+                    <br>echo "Número: " . $contador;
+                    <br>$contador++;
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Bucle Do While</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$contador = 1;
+
+                <br>do {
+                    <br>echo "Número: " . $contador;
+                    <br>$contador++;
+                <br>} while ($contador <= 5);
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de For</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>for ($contador = 1; $contador <= 5; $contador++) {
+                    <br>echo "Número: " . $contador;
+                <br>}
+                ?&gt;
+              </div>
+
+              <br><h5>Ejemplo de Estructura de Bucle Foreach</h5>
+
+              <div class="codigo-ejemplo">
+                &lt;?php
+                <br>$numeros = [1, 2, 3, 4, 5];
+                <br>foreach ($numeros as $numero) {
+                    <br>echo "Número: " . $numero;
+                <br>}
+                ?&gt;
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem">
+      <!-- Funciones -->
+      <div class="card mb-4 shadow-sm">
         <div class="card-body">
-          <h5 class="card-title">While</h5>
+          <h3 class="card-title">Funciones en PHP</h3>
           <p class="card-text">
-            Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia
+            Una función es un bloque de código que puedes reutilizar. Esto evita
+            repetir lo mismo una y otra vez.  
           </p>
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/while" class="btn btn-success">Documentacion</a>
+          <p>Ejemplo de función:</p>
+          <pre><code>&lt;?php
+function saludo($nombre) {
+    return "Hola, " . $nombre . "!";
+}
+echo saludo("Cristian"); // Hola, Cristian!
+?&gt;</code></pre>
+          <p>
+            Consejo: las funciones te ayudan a organizar tu programa en partes
+            más pequeñas y fáciles de entender.
+          </p>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem">
+      <!-- Formularios -->
+      <div class="card mb-4 shadow-sm">
         <div class="card-body">
-          <h5 class="card-title">For</h5>
-          <p class="card-text">
-           es una estructura de control que repite un bloque de código un número específico de veces, ideal para iterar sobre arrays u otras secuencias.
+          <h3 class="card-title">Manejo de Formularios</h3>
+          <p>
+            PHP se usa mucho para procesar datos de formularios, como logins o
+            registros.
           </p>
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for" class="btn btn-success">Documentacion</a>
+          <p><b>Ejemplo:</b></p>
+          <pre><code>&lt;form method="post"&gt;
+  Nombre: &lt;input type="text" name="usuario"&gt;
+  &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+
+&lt;?php
+if(isset($_POST['usuario'])){
+    echo "Bienvenido, " . $_POST['usuario'];
+}
+?&gt;</code></pre>
+          <p>
+            Nota: siempre valida y limpia los datos que recibes para evitar
+            ataques de seguridad.
+          </p>
         </div>
       </div>
 
-      <div class="card" style="width: 18rem">
+      <!-- Conexión a BD -->
+      <div class="card mb-4 shadow-sm">
         <div class="card-body">
-          <h5 class="card-title">For each</h5>
-          <p class="card-text">
-            El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+          <h3 class="card-title">Conexión con Bases de Datos</h3>
+          <p>
+            Uno de los puntos más fuertes de PHP es que puede trabajar con
+            bases de datos como MySQL. Aquí un ejemplo sencillo usando MySQLi:
           </p>
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="btn btn-success">Documentacion</a>
+          <pre><code>&lt;?php
+$conn = new mysqli("localhost", "root", "", "mi_base");
+
+if ($conn-&gt;connect_error) {
+  die("Error de conexión: " . $conn-&gt;connect_error);
+}
+
+$result = $conn-&gt;query("SELECT nombre FROM usuarios");
+
+while($row = $result-&gt;fetch_assoc()) {
+  echo $row["nombre"] . "&lt;br&gt;";
+}
+$conn-&gt;close();
+?&gt;</code></pre>
+          <p>
+            En este ejemplo:  
+            - Nos conectamos al servidor local.  
+            - Ejecutamos una consulta.  
+            - Recorremos los resultados con un bucle <code>while</code>.  
+            - Cerramos la conexión.  
+          </p>
+        </div>
+      </div>
+
+      <!-- Sesiones -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Sesiones en PHP</h3>
+          <p>
+            Las sesiones permiten guardar información mientras un usuario navega
+            por la página. Por ejemplo, recordar quién ha iniciado sesión.
+          </p>
+          <pre><code>&lt;?php
+session_start();
+$_SESSION["usuario"] = "Daniel";
+echo "Bienvenido, " . $_SESSION["usuario"];
+?&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Archivos -->
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Manejo de Archivos</h3>
+          <p>
+            PHP también puede crear, leer y modificar archivos en el servidor.
+          </p>
+          <pre><code>&lt;?php
+$file = fopen("datos.txt", "w"); // Abrir en modo escritura
+fwrite($file, "Hola desde PHP"); // Escribir
+fclose($file); // Cerrar archivo
+?&gt;</code></pre>
+          <p>
+            Este código genera un archivo <code>datos.txt</code> y escribe en él
+            el texto "Hola desde PHP".
+          </p>
+        </div>
+      </div>
+
+      <!-- Proyectos -->
+      <div class="accordion mb-4" id="proyectosAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingProyectos">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProyectos" aria-expanded="false" aria-controls="collapseProyectos">
+            Ejemplos de Proyectos en PHP
+            </button>
+          </h2>
+          <div id="collapseProyectos" class="accordion-collapse collapse" aria-labelledby="headingProyectos" data-bs-parent="#proyectosAccordion">
+            <div class="accordion-body">
+              <ul>
+                <li>Un sistema de login con usuarios y contraseñas.</li>
+                <li>Un blog donde se guarden las publicaciones en MySQL.</li>
+                <li>Un carrito de compras simple.</li>
+                <li>Una calculadora con formularios.</li>
+                <li>Un gestor de tareas con opciones de agregar y eliminar.</li>
+              </ul>
+              <p>
+                Estos proyectos son ideales para practicar y poco a poco ir
+                dominando PHP en la práctica.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <!-- End PHP Section -->
+
+    <br><br>
 
 
     <div class="footer">
-      <p>Cristian <b>Rivera</b> | Daniel <b>Diaz</b> </p>
+      <p>by: Cristian <b>Rivera</b> | Daniel <b>Diaz</b> </p>
     </div>
 
     <!-- bootstrap -->

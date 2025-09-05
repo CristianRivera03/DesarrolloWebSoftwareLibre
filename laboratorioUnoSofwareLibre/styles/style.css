@@ -183,4 +183,11 @@
   font-size: 20px;
 }
 
-
+/* Editor estilos */
+.codigo-ejemplo {
+    background-color:#1e1e1e; 
+    color:white; 
+    padding:15px; 
+    border-radius:8px; 
+    font-family:monospace;
+}
